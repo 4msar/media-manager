@@ -1,0 +1,54 @@
+{
+    "name": "4msar/media-manager",
+    "description": "Simple media manager",
+    "keywords": [
+        "4msar",
+        "media-manager"
+    ],
+    "homepage": "https://github.com/4msar/media-manager",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Saiful Alam",
+            "email": "msa4rakib@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MSAR\\MediaManager\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MSAR\\MediaManager\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MSAR\\MediaManager\\MediaManagerServiceProvider"
+            ],
+            "aliases": {
+                "MediaManager": "MSAR\\MediaManager\\MediaManagerFacade"
+            }
+        }
+    }
+}
